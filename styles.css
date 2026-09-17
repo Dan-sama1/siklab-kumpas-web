@@ -30,7 +30,7 @@
   --panel-2: #F7F1F7;
   --ink: #1A1A2E;
   --ink-2: #4B4860;
-  --ink-3: #6E6A80;
+  --ink-3: #5E5A70;
   --line: rgba(26, 26, 46, 0.12);
   --sign-tint: rgba(255, 107, 1, 0.10);
   --hear-tint: rgba(108, 99, 255, 0.10);
@@ -47,7 +47,7 @@
   --radius-s: 10px;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-  --measure: 66ch;
+  --measure: 58ch;              /* ≈ 640px in Figtree at 17px: 65–75 characters */
   color-scheme: light;
 }
 
@@ -116,8 +116,10 @@ html { scrollbar-color: rgba(255, 107, 1, 0.55) transparent; scrollbar-width: th
 html[data-lang="en"] [lang="fil"] { display: none !important; }
 html[data-lang="fil"] [lang="en"] { display: none !important; }
 
+[id] { scroll-margin-top: 84px; }
+
 .wrap { width: min(100% - 40px, 1120px); margin-inline: auto; }
-.wrap.narrow > * { max-width: 720px; }
+.wrap.narrow > * { max-width: var(--measure); }
 @media (max-width: 720px) { .wrap { width: min(100% - 32px, 1120px); } }
 
 h2 { font-size: clamp(1.7rem, 1.35rem + 1.4vw, 2.25rem); font-weight: 800; margin-bottom: 0.55em; }
@@ -162,9 +164,15 @@ section > h2, .part > h3 { margin-top: 0; }
 .pill[hidden] { display: none; }
 .pill:active { transform: scale(0.97); }
 .pill .ic { width: 1.1em; height: 1.1em; }
-@media (max-width: 860px) { .top-nav { display: none; } }
+@media (max-width: 860px) {
+  .top { flex-wrap: wrap; height: auto; padding: 10px 20px 0; row-gap: 4px; }
+  .top-nav { order: 10; flex-basis: 100%; margin: 0 -20px; padding: 2px 16px 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .top-nav::-webkit-scrollbar { display: none; }
+  .top-nav a { white-space: nowrap; font-size: 0.9rem; padding: 5px 9px; }
+  [id] { scroll-margin-top: 112px; }
+}
 @media (max-width: 480px) {
-  .top { gap: 12px; padding: 0 16px; }
+  .top { gap: 12px; padding: 10px 16px 0; }
   .top-actions { gap: 8px; }
   .brand { font-size: 1rem; }
   .pill span { display: none !important; }
@@ -173,23 +181,25 @@ section > h2, .part > h3 { margin-top: 0; }
 }
 
 /* ------------------------------------------------------------ cover */
-.cover { padding: clamp(48px, 9vw, 112px) 0 clamp(28px, 4vw, 48px); }
-.cover h1 { font-size: clamp(2.6rem, 2rem + 3.2vw, 4.4rem); font-weight: 900; letter-spacing: -0.035em; line-height: 1; }
-.tagline { margin: 14px 0 6px; font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem); font-weight: 700; color: var(--accent-text); letter-spacing: -0.01em; }
+.cover { padding: clamp(24px, 4vw, 40px) 0 clamp(10px, 2vw, 16px); }
+.cover h1 { font-size: clamp(2.3rem, 1.8rem + 2.2vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; line-height: 1; }
+.tagline { margin: 10px 0 4px; font-size: clamp(1.15rem, 1rem + 0.8vw, 1.45rem); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
 .lede { font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem); color: var(--ink-2); max-width: 58ch; }
-.members { margin-top: 30px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 18px; }
+.members { margin-top: 18px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 18px; }
 .members-title { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
 .member-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; max-width: none; }
 .member-list li { margin: 0; padding: 6px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); color: var(--ink); font-weight: 600; font-size: 0.95rem; }
 
 /* ------------------------------------------------------------ purpose */
-.purpose { padding: clamp(24px, 4vw, 40px) 0 clamp(36px, 6vw, 64px); }
+.purpose { padding: clamp(12px, 2vw, 20px) 0 24px; }
 .placeholder-note { color: var(--ink-3); font-style: italic; font-size: 0.95rem; }
 .ph { color: var(--ink-3); font-style: italic; }
 
 /* ------------------------------------------------------------ walkthrough */
 .walk { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
-.walk-main > section { padding: clamp(36px, 6vw, 72px) 0; border-top: 1px solid var(--line); }
+.walk-main > section { padding: clamp(32px, 5vw, 56px) 0; border-top: 1px solid var(--line); }
+.walk-main > section:first-child { padding-top: 28px; }
+.download > .phone--inline { display: none; }   /* the Home screen belongs to the manual on phones; on desktop it seeds the stage */
 .walk-side { display: none; }
 
 @media (min-width: 1000px) {
@@ -221,8 +231,10 @@ section > h2, .part > h3 { margin-top: 0; }
   font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; z-index: 2;
 }
 html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang screenshot"; }
-.phone--inline { margin-left: 0; }
-.phone--stage { width: 100%; margin: 0; }
+.phone--inline { margin: 12px auto 18px; }
+.phone--stage { width: 100%; margin: 0; transition: opacity 240ms var(--ease-out); }
+.phone--stage.is-idle { opacity: 0.35; }
+.phone--stage.is-idle figcaption, .phone--stage.is-idle::after { visibility: hidden; }
 .phone--stage img { position: relative; z-index: 1; transition: opacity 220ms var(--ease-out), filter 220ms var(--ease-out); }
 .phone--stage .stage-next { position: absolute; top: 8px; left: 8px; width: calc(100% - 16px); opacity: 0; z-index: 0; }
 .phone--stage.is-swapping img:first-of-type { opacity: 0; filter: blur(2px); }
@@ -247,6 +259,7 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
 .needs .ic { color: var(--accent-text); }
 .verify { margin-top: 16px; max-width: var(--measure); }
 .verify summary { cursor: pointer; font-weight: 600; color: var(--ink-2); width: max-content; padding: 4px 0; }
+.verify summary::marker { color: var(--accent-text); }
 .verify p { margin-top: 10px; font-size: 0.95rem; color: var(--ink-2); }
 .sha { display: grid; gap: 4px; }
 .sha span { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; color: var(--ink-3); }
@@ -276,11 +289,12 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
 .manual-toc a:active { transform: scale(0.97); }
 .part { padding: 12px 0 28px; }
 .part + .part { border-top: 1px solid var(--line); padding-top: 40px; }
-.part > h3 { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; scroll-margin-top: 84px; }
+.part > h3 { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
 .part > h3 .n { flex: none; font-size: 0.95rem; font-weight: 800; color: var(--on-orange); background: var(--orange); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; align-self: center; font-variant-numeric: tabular-nums; }
 .part .step { padding: 8px 0 18px; }
 .part .step h4 { margin: 0 0 8px; transition: color 200ms var(--ease-out); }
 .part .step.is-active h4 { color: var(--accent-text); }
+.chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--sign-tint); color: var(--accent-text); font-size: 0.78em; font-weight: 800; letter-spacing: 0.05em; vertical-align: middle; }
 .lane { display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; padding: 10px 14px; border-radius: 12px; font-size: 1rem; }
 .lane--sign { background: var(--sign-tint); color: var(--accent-text); }
 .lane--hear { background: var(--hear-tint); color: var(--purple-text); }
@@ -343,36 +357,56 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
 .foot p { margin: 0; }
 
 /* ------------------------------------------------------------ print: Install + Manual only, English, Letter */
-@page { size: Letter; margin: 22mm 20mm; }
+@page { size: Letter; margin: 20mm 18mm; }
 @media print {
   html { scroll-behavior: auto; }
-  body { background: #fff !important; color: #000; font-size: 11pt; line-height: 1.45; }
+  body { background: #fff !important; color: #000; font-size: 10.5pt; line-height: 1.45; }
   .top, .cover, .purpose, .about, .foot, .walk-side, .vocab-tools, .manual-toc, .verify summary, .pill { display: none !important; }
   [lang="fil"] { display: none !important; }
+  .wrap { width: 100%; }
   .walk { display: block; }
-  .walk-main > section { border: 0; padding: 0 0 12mm; }
+  .walk-main > section { border: 0; padding: 0 0 10mm; }
+  p, ul, ol { max-width: none; }
   .download { display: block; }
   .btn-download { display: none; }
   .download::before { content: "Siklab-Kumpas — User Manual, version 1.0.0"; display: block; font-size: 22pt; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 8mm; }
-  .download::after { content: "Download: https://github.com/Dan-sama1/siklab-kumpas-web/releases/latest/download/siklab-kumpas.apk"; display: block; font-size: 9.5pt; color: #333; margin-top: 4mm; word-break: break-all; }
-  .verify { margin-top: 3mm; } .verify[open] > *:not(summary), .verify > *:not(summary) { display: block; }
+  .download::after { content: "Download: https://github.com/Dan-sama1/siklab-kumpas-web/releases/latest/download/siklab-kumpas.apk"; display: block; font-size: 9pt; color: #333; margin-top: 3mm; word-break: break-all; }
+  .verify { margin-top: 3mm; }
+  .verify > *:not(summary) { display: block; }
+  .sha code { border: 0.3pt solid #999; background: #fff; }
   .install, .manual { break-before: page; }
+  h2, .part > h3, .step h4, .steps h3, .vocab-set h4, .vocab-group h5, .vocab-note, .lane { break-after: avoid; }
   .part { break-inside: auto; }
-  .part > h3, .step h4, .steps h3 { break-after: avoid; }
-  .phone { width: 46mm; margin: 3mm 0 2mm; padding: 1.6mm; border-radius: 7mm; box-shadow: none; background: #222; break-inside: avoid; }
-  .phone img { border-radius: 5.5mm; }
+
+  /* a step is text on the left and its screen on the right, so two fit a page */
+  .step { display: grid; grid-template-columns: minmax(0, 1fr) 38mm; column-gap: 7mm; align-items: start; break-inside: avoid; padding: 0 0 6mm; }
+  .step > * { grid-column: 1; }
+  .step > .phone { grid-column: 2; grid-row: 1 / span 6; }
+  .download > .phone { display: none; }
+  .phone { width: 38mm; margin: 1mm 0 0; padding: 1.4mm; border-radius: 6mm; box-shadow: none; background: #222; }
+  .phone img { border-radius: 4.8mm; }
   .phone::before { display: none; }
-  .phone figcaption { font-size: 7.5pt; padding: 5mm 3mm 3mm; }
-  .phone[data-placeholder]::after { font-size: 7pt; }
-  .steps > .step { padding-left: 14mm; break-inside: avoid; }
-  .steps > .step::before { width: 9mm; height: 9mm; font-size: 11pt; color: #1A1A2E; background: #FF6B01; border-color: #FF6B01; }
+  .phone figcaption { font-size: 6.5pt; padding: 4mm 2.5mm 2.5mm; }
+  .phone[data-placeholder]::after { font-size: 6pt; padding: 1mm 2mm; }
+  .steps { margin-top: 4mm; }
+  .steps > .step { padding-left: 13mm; }
+  .steps > .step::before { width: 8.5mm; height: 8.5mm; font-size: 10.5pt; color: #1A1A2E; background: #FF6B01; border-color: #FF6B01; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .steps > .step h3 { margin-top: 1mm; }
   .part > h3 .n { color: #1A1A2E; background: #FF6B01; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .lane, .callout, .profile, .vocab-grid li, .count, .letter-row li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .vocab-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5mm 4mm; }
-  .vocab-grid li { padding: 1.5mm 2.5mm; border: 0.3pt solid #999; background: #fff; }
+  .lane, .callout, .profile, .count, .letter-row li, .fg-frame, .fg-dash, .fg-hand { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .callout { background: #fff3ea; }
+  .profiles { grid-template-columns: 1fr 1fr; }
+  .profile { border: 0.3pt solid #999; background: #fff; }
+  .framing { grid-template-columns: 48mm minmax(0, 1fr); gap: 8mm; break-inside: avoid; }
+  .vocab-grid { grid-template-columns: repeat(4, 1fr); gap: 1.2mm 3mm; }
+  .vocab-grid li { padding: 1.2mm 2.2mm; border: 0.3pt solid #999; background: #fff; border-radius: 1.5mm; }
+  .vocab-grid .gloss { font-size: 8pt; }
   .vocab-grid .fil { display: none; }
-  .vocab-set { break-inside: auto; }
+  .vocab-set { break-inside: auto; padding-top: 3mm; }
   .vocab-group { break-inside: avoid; }
+  .vocab-group:has(.vocab-grid li:nth-child(60)) { break-inside: auto; }
+  .letter-row li { width: 8mm; height: 8mm; border-radius: 2mm; }
+  .trouble dt { break-after: avoid; }
+  .trouble dd { break-before: avoid; }
   a { color: #000; text-decoration: none; }
-  .trouble dd a::after, .limits a::after { content: ""; }
 }

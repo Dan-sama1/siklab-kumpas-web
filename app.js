@@ -45,11 +45,15 @@
   var swapTimer = null;
 
   function frameFor(step) {
-    return step.querySelector('.phone--inline');
+    // A part with no frame of its own borrows the screen it names.
+    return step.querySelector('.phone--inline') ||
+      document.querySelector('.phone--inline[data-shot="' + step.getAttribute('data-screen') + '"]');
   }
 
   function showOnStage(step) {
     if (!stage) return;
+    if (step.getAttribute('data-screen') === 'none') { stage.classList.add('is-idle'); return; }
+    stage.classList.remove('is-idle');
     var frame = frameFor(step);
     if (!frame) return;
     var src = frame.querySelector('img').getAttribute('src');

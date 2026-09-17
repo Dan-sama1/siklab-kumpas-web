@@ -160,6 +160,7 @@ try {
       }
     }
   } else if (cmd === 'pdf') {
+    await send('Runtime.evaluate', { expression: "document.querySelectorAll('details').forEach(d => d.open = true)" }, s);
     // Let @page in the stylesheet decide size and margins.
     const pdf = await send('Page.printToPDF', {
       printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false,

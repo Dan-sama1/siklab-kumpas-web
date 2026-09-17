@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T03:10:00+08:00",
+  "title": "Design System: Siklab-Kumpas site",
+  "extensions": {
+    "colorMeta": {
+      "spark-orange": { "role": "primary", "displayName": "Spark Orange", "canonical": "#FF6B01", "tonalRamp": ["#3D1900", "#6B2C00", "#994000", "#C24E00", "#FF6B01", "#FF8A3D", "#FFB27A", "#FFE1C9"] },
+      "spark-ink": { "role": "primary", "displayName": "Spark Ink", "canonical": "#C24E00", "tonalRamp": ["#3D1900", "#6B2C00", "#994000", "#C24E00", "#E05B00", "#FF6B01", "#FF9A55", "#FFDCC2"] },
+      "on-orange": { "role": "primary", "displayName": "On-Orange Ink", "canonical": "#1A1A2E", "tonalRamp": ["#0B0B14", "#1A1A2E", "#2E2E4A", "#4B4860", "#6E6A80", "#9C97AA", "#C9C4D2", "#F0F0F0"] },
+      "avatar-purple": { "role": "secondary", "displayName": "Avatar Purple", "canonical": "#6C63FF", "tonalRamp": ["#141240", "#26237A", "#3B34B3", "#4B43D6", "#6C63FF", "#9D97FF", "#C4C0FF", "#E9E8FF"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1A1A2E", "tonalRamp": ["#0B0B14", "#1A1A2E", "#2E2E4A", "#4B4860", "#5E5A70", "#9C97AA", "#C9C4D2", "#F0F0F0"] },
+      "light-ground": { "role": "neutral", "displayName": "Lavender Wash", "canonical": "#F0F0F0", "tonalRamp": ["#2C1230", "#5A2E5E", "#8E5A92", "#C39AC6", "#F0D8F0", "#F5E3F4", "#FBDFD5", "#FFF3EA"] },
+      "dark-ground": { "role": "neutral", "displayName": "Ember Black", "canonical": "#000000", "tonalRamp": ["#000000", "#110D13", "#1E0F28", "#280D3A", "#2C1230", "#371817", "#3B1C0E", "#5A2E1A"] },
+      "light-panel": { "role": "neutral", "displayName": "Panel White", "canonical": "#FFFFFF", "tonalRamp": ["#262626", "#4A4A4A", "#7A7A7A", "#B0B0B0", "#D9D9D9", "#EDEDED", "#F7F1F7", "#FFFFFF"] },
+      "dark-panel": { "role": "neutral", "displayName": "Panel Charcoal", "canonical": "#181818", "tonalRamp": ["#0A0A0C", "#181818", "#262626", "#3A3A3A", "#575757", "#7A7A7A", "#B0B0B0", "#E0E0E0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The cover title only." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings: Purpose, Download, Install steps, User manual, About." },
+      "title": { "displayName": "Title", "purpose": "Manual parts (with numeral) and install-step titles." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "Step headings inside a manual part; turns Spark Ink while active." },
+      "body": { "displayName": "Body", "purpose": "All copy, 66ch measure." },
+      "label": { "displayName": "Label", "purpose": "MEMBERS and SHA-256 labels only." },
+      "gloss": { "displayName": "Gloss", "purpose": "Vocabulary entries, as the app prints them." }
+    },
+    "shadows": [
+      { "name": "phone", "value": "0 18px 40px -18px rgba(44, 18, 48, 0.45)", "purpose": "The phone bezel on the light wash; 0 22px 44px -18px rgba(0,0,0,0.7) in the dark theme." },
+      { "name": "cta", "value": "0 16px 34px -14px rgba(255, 107, 1, 0.55)", "purpose": "Download button and header pill on the light wash; 0 16px 34px -14px rgba(0,0,0,0.7) in the dark theme." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Every entrance, press and swap." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Reserved for on-screen movement; unused so far." },
+      { "name": "press", "value": "transform 160ms", "purpose": "Buttons, pills and chips scale to 0.97 on :active." },
+      { "name": "stage-swap", "value": "opacity 220ms, filter 220ms (blur 2px)", "purpose": "The sticky phone crossfades to the next screen; instant under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone-narrow", "value": "480px" },
+      { "name": "phone", "value": "720px" },
+      { "name": "header-wrap", "value": "860px" },
+      { "name": "two-column", "value": "1000px" },
+      { "name": "wide", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Download Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The page's one call-to-action: Spark Orange with On-Orange ink, drawn download arrow, offset shadow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v12m0 0 5-5m-5 5-5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2\"/></svg>Download Siklab-Kumpas</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; padding: 14px 24px; background: #FF6B01; color: #1A1A2E; text-decoration: none; font-family: Figtree, system-ui, sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; border-radius: 16px; box-shadow: 0 16px 34px -14px rgba(255,107,1,0.55); transition: transform 160ms cubic-bezier(0.23,1,0.32,1); } .ds-btn-primary:hover { transform: translateY(-1px); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 3px solid #FF6B01; outline-offset: 3px; } .ds-ic { width: 1.35em; height: 1.35em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Header Pill",
+      "kind": "button",
+      "refersTo": "pill-download",
+      "description": "The compact Download that appears in the sticky header once the real button scrolls off.",
+      "html": "<a class=\"ds-pill\" href=\"#\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v12m0 0 5-5m-5 5-5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2\"/></svg>Download</a>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 12px; background: #FF6B01; color: #1A1A2E; text-decoration: none; font-family: Figtree, system-ui, sans-serif; font-weight: 700; font-size: 0.92rem; border-radius: 999px; box-shadow: 0 16px 34px -14px rgba(255,107,1,0.55); transition: transform 160ms cubic-bezier(0.23,1,0.32,1); } .ds-pill:active { transform: scale(0.97); } .ds-pill:focus-visible { outline: 3px solid #FF6B01; outline-offset: 3px; } .ds-ic { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Language Toggle",
+      "kind": "nav",
+      "refersTo": "segmented-language",
+      "description": "EN | FIL segmented control; the active side fills Spark Orange.",
+      "html": "<div class=\"ds-lang\" role=\"group\" aria-label=\"Language\"><button type=\"button\" aria-pressed=\"true\">EN</button><button type=\"button\" aria-pressed=\"false\">FIL</button></div>",
+      "css": ".ds-lang { display: inline-flex; padding: 3px; border-radius: 999px; background: #F7F1F7; border: 1px solid rgba(26,26,46,0.12); } .ds-lang button { appearance: none; border: 0; background: transparent; color: #4B4860; font-family: Figtree, system-ui, sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: background-color 160ms ease, color 160ms ease, transform 160ms cubic-bezier(0.23,1,0.32,1); } .ds-lang button[aria-pressed=\"true\"] { background: #FF6B01; color: #1A1A2E; } .ds-lang button:active { transform: scale(0.96); } .ds-lang button:focus-visible { outline: 3px solid #FF6B01; outline-offset: 3px; }"
+    },
+    {
+      "name": "Mode Chip",
+      "kind": "chip",
+      "refersTo": "chip-mode",
+      "description": "The app's camera chip, quoted in the manual: FSL WORDS · LETTERS · ASL WORDS.",
+      "html": "<span class=\"ds-chip\">FSL WORDS</span> <span class=\"ds-chip\">LETTERS</span> <span class=\"ds-chip\">ASL WORDS</span>",
+      "css": ".ds-chip { display: inline-block; padding: 2px 10px; border-radius: 999px; background: rgba(255,107,1,0.10); color: #C24E00; font-family: Figtree, system-ui, sans-serif; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.05em; }"
+    },
+    {
+      "name": "Contents Chip",
+      "kind": "chip",
+      "refersTo": "chip-toc",
+      "description": "Manual table-of-contents link; takes an orange border on hover.",
+      "html": "<a class=\"ds-toc\" href=\"#\">Framing</a> <a class=\"ds-toc\" href=\"#\">Screens</a> <a class=\"ds-toc\" href=\"#\">Words</a>",
+      "css": ".ds-toc { display: inline-block; text-decoration: none; color: #4B4860; font-family: Figtree, system-ui, sans-serif; font-weight: 600; font-size: 0.92rem; padding: 7px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(26,26,46,0.12); transition: transform 160ms cubic-bezier(0.23,1,0.32,1); } .ds-toc:hover { color: #1A1A2E; border-color: #FF6B01; } .ds-toc:active { transform: scale(0.97); } .ds-toc:focus-visible { outline: 3px solid #FF6B01; outline-offset: 3px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Vocabulary search: hairline field, drawn icon, orange caret and focus border.",
+      "html": "<label class=\"ds-search\"><svg class=\"ds-ic\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6\"/><path d=\"m20 20-4.5-4.5\"/></svg><input type=\"search\" placeholder=\"Search a word · Maghanap ng salita\" aria-label=\"Search the vocabulary\"></label>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 10px; max-width: 420px; padding: 10px 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid rgba(26,26,46,0.12); color: #5E5A70; font-family: Figtree, system-ui, sans-serif; transition: border-color 160ms ease; } .ds-search:focus-within { border-color: #FF6B01; } .ds-search input { flex: 1; min-width: 0; border: 0; background: transparent; color: #1A1A2E; font: inherit; font-size: 1.0625rem; outline: none; caret-color: #FF6B01; } .ds-search input::placeholder { color: #5E5A70; } .ds-ic { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }"
+    },
+    {
+      "name": "Vocabulary Tile",
+      "kind": "card",
+      "refersTo": "vocab-tile",
+      "description": "One word the app knows: the gloss as the app prints it, its Filipino meaning beneath.",
+      "html": "<ul class=\"ds-vocab\"><li><span class=\"ds-gloss\">GOOD MORNING</span><span class=\"ds-fil\">Magandang umaga</span></li><li><span class=\"ds-gloss\">THANK YOU</span><span class=\"ds-fil\">Salamat</span></li></ul>",
+      "css": ".ds-vocab { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 4px 12px; font-family: Figtree, system-ui, sans-serif; } .ds-vocab li { padding: 7px 10px; border-radius: 10px; background: #FFFFFF; color: #1A1A2E; display: grid; gap: 1px; } .ds-gloss { font-weight: 700; font-size: 0.86rem; letter-spacing: 0.03em; } .ds-fil { font-size: 0.86rem; color: #4B4860; }"
+    },
+    {
+      "name": "Step Numeral",
+      "kind": "custom",
+      "refersTo": "step-numeral",
+      "description": "Install-step counter: ringed at rest, filled while the step is active on the stage.",
+      "html": "<span class=\"ds-num\">1</span> <span class=\"ds-num ds-num--active\">2</span>",
+      "css": ".ds-num { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; font-family: Figtree, system-ui, sans-serif; font-weight: 800; font-size: 1.05rem; font-variant-numeric: tabular-nums; color: #C24E00; background: #FFFFFF; border: 2px solid #FF6B01; transition: background-color 200ms cubic-bezier(0.23,1,0.32,1), color 200ms cubic-bezier(0.23,1,0.32,1); } .ds-num--active { background: #FF6B01; color: #1A1A2E; }"
+    },
+    {
+      "name": "Phone Frame",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "The signature container: dark bezel, 9:20 screen, caption over a black gradient, placeholder pill until a real screenshot lands.",
+      "html": "<figure class=\"ds-phone\" data-placeholder><div class=\"ds-screen\"></div><figcaption>Home: choose your profile</figcaption></figure>",
+      "css": ".ds-phone { position: relative; width: 236px; margin: 0; padding: 8px; border-radius: 34px; background: #141418; box-shadow: 0 18px 40px -18px rgba(44,18,48,0.45); font-family: Figtree, system-ui, sans-serif; } .ds-screen { aspect-ratio: 9 / 20; border-radius: 26px; background: linear-gradient(180deg, #1E0F28, #2C1230 50%, #3B1C0E); } .ds-phone::before { content: \"\"; position: absolute; top: 16px; left: 50%; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #000; box-shadow: inset 0 0 0 2px #2a2a30; } .ds-phone figcaption { position: absolute; left: 8px; right: 8px; bottom: 8px; padding: 26px 14px 14px; border-radius: 0 0 26px 26px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72) 60%); color: #fff; font-size: 0.85rem; font-weight: 600; } .ds-phone[data-placeholder]::after { content: \"Screenshot coming\"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 6px 12px; border-radius: 999px; background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.85); font-size: 0.78rem; font-weight: 600; white-space: nowrap; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Phone in Your Hand",
+    "overview": "The site is the app's own material, not a brochure about it. It inherits Siklab-Kumpas's two grounds — black lit from within by an ember gradient in the dark, a lavender-and-peach wash in the light — and its one accent, the spark orange the app spends on every button. The page follows the phone's light/dark setting and never offers its own switch, so what a respondent sees on the site is the world they will meet inside the app a minute later.\n\nEverything is arranged around a phone frame. On a laptop the frame stays put at the right while the instructions scroll past it, swapping its screen to whichever step is nearest the reading line; on a phone the frame sits inline under each step heading, before the words that tell the reader what to tap. Text is short, second-person and bilingual (English default, Filipino by toggle), set in a single friendly sans at a generous size, because the primary reader is a Deaf or hearing respondent who is not technical and may be reading their second language outdoors.\n\nDensity is calm: one column of copy held to a 66-character measure, section spacing that breathes, and a single moment of motion (the frame's crossfade). Confirmed rejections: no marketing hero, no white text on the brand orange (it fails contrast), no on-page theme toggle, no kickers or eyebrow labels, no emoji or glyph icons.",
+    "keyCharacteristics": [
+      "The app's exact gradient stops for both grounds; orange is the only accent, purple appears solely for the hearing person's lane",
+      "A dark-bezel phone frame (9:20, 34px radius) is the recurring container for every screenshot",
+      "Ink-on-orange for every accent surface (button, pill, toggle, numerals)",
+      "One face — Figtree, self-hosted variable 300–900 — from 900 display down to 700 tracked glosses",
+      "Both languages live in the HTML; a toggle shows one, so the page reads without JavaScript and prints in English"
+    ],
+    "rules": [
+      { "name": "The Ink-on-Orange Rule", "body": "Spark Orange never carries white text. Anything set on it — button label, numeral, toggle — is On-Orange ink.", "section": "colors" },
+      { "name": "The One Purple Rule", "body": "Purple marks the hearing person's lane and nothing else; the signer's lane and every action stay orange.", "section": "colors" },
+      { "name": "The Phone Decides Rule", "body": "Light or dark follows prefers-color-scheme; the page ships no theme control of its own.", "section": "colors" },
+      { "name": "The One Face Rule", "body": "Figtree carries every role; a second face would be a second voice the app does not have.", "section": "typography" },
+      { "name": "The Sixty-Six Rule", "body": "Paragraphs and lists never exceed 66ch, at every breakpoint.", "section": "typography" },
+      { "name": "The Two Shadows Rule", "body": "Only the phone and the call-to-action are lifted; everything else is flat on the ground.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set anything on Spark Orange in On-Orange ink (#1A1A2E); white on the orange is 2.9:1.",
+      "Do keep both languages in the markup as sibling lang=\"en\" / lang=\"fil\" elements and let html[data-lang] choose; never render one language from JavaScript alone.",
+      "Do give every screenshot the phone frame, its caption, and the placeholder pill until a real capture replaces it.",
+      "Do hold copy to the 66ch measure and 1.55 line-height; respondents read this on a phone in daylight.",
+      "Do animate only transform, opacity and filter, ≤250ms, with cubic-bezier(0.23,1,0.32,1), and honour prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add a theme toggle; the phone's setting decides.",
+      "Don't introduce a second accent — purple exists only for the hearing person's lane.",
+      "Don't use kickers, eyebrow labels, gradient text, coloured side stripes, hard offset shadows, or emoji/glyph icons; icons are drawn 24px SVG at 2px round stroke.",
+      "Don't shadow panels, chips or tiles; only the phone and the call-to-action are lifted.",
+      "Don't put the stage's direction contract or any design notes into the served HTML."
+    ]
+  }
+}
