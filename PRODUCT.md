@@ -33,7 +33,7 @@ The website exists to get the app onto a respondent's phone and teach them to us
 ## Operating Context
 
 - The app is sideloaded, not on Google Play. Android shows 3–4 warning dialogs during install (browser "this file can harm your device", "allow installs from this source", Play Protect). The site's install steps and screenshots are what get a respondent through them.
-- Test/reference devices: Realme 9i (near-stock Android; all screenshots come from it) and a Xiaomi on HyperOS (extra prompts).
+- Test/reference devices: Realme 9i (RMX3491, Android 13, realme UI 4.0, 1080×2412 — all screenshots come from it, in Chrome) and a Redmi 9 (MIUI 13).
 - Speech output depends on the phone's text-to-speech engine (defaults to `en-US`). A phone with no default TTS engine, or no Filipino voice installed, produces silence or wrong pronunciation — the manual must cover TTS setup.
 - The panel reads the manual as a PDF printed from this page (Install steps + User manual, English, Letter). The PDF is not linked from the site.
 

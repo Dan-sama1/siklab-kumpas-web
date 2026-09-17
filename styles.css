@@ -218,11 +218,7 @@ section > h2, .part > h3 { margin-top: 0; }
   box-shadow: var(--shadow);
   position: relative;
 }
-.phone img { display: block; width: 100%; aspect-ratio: 9 / 20; object-fit: cover; border-radius: 26px; background: #1E0F28; }
-.phone::before { /* punch-hole camera */
-  content: ""; position: absolute; top: 16px; left: 50%; width: 10px; height: 10px; margin-left: -5px;
-  border-radius: 50%; background: #000; box-shadow: inset 0 0 0 2px #2a2a30; z-index: 2;
-}
+.phone img { display: block; width: 100%; aspect-ratio: 1080 / 2412; object-fit: cover; border-radius: 26px; background: #1E0F28; }   /* Realme 9i screen */
 .phone figcaption { position: absolute; z-index: 3; left: 8px; right: 8px; bottom: 8px; padding: 26px 14px 14px; border-radius: 0 0 26px 26px;
   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.72) 60%); color: #fff; font-size: 0.85rem; font-weight: 600; line-height: 1.3; }
 .phone[data-placeholder]::after {
@@ -385,7 +381,6 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
   .download > .phone { display: none; }
   .phone { width: 38mm; margin: 1mm 0 0; padding: 1.4mm; border-radius: 6mm; box-shadow: none; background: #222; }
   .phone img { border-radius: 4.8mm; }
-  .phone::before { display: none; }
   .phone figcaption { font-size: 6.5pt; padding: 4mm 2.5mm 2.5mm; }
   .phone[data-placeholder]::after { font-size: 6pt; padding: 1mm 2mm; }
   .steps { margin-top: 4mm; }
