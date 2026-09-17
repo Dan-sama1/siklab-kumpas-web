@@ -50,7 +50,7 @@ The website exists to get the app onto a respondent's phone and teach them to us
 **Site constraints (decided by the team, 2026-09-17):**
 - One page, fixed section order: App title → Members → Purpose of the Study → Download → Install steps → User manual → About.
 - English default with a Filipino toggle. Translated: Purpose, Download, Install, Manual, About. Not translated: app title, members. Vocabulary entries carry a Filipino translation beside every gloss in Filipino mode; the English gloss always stays visible because that is what the app displays.
-- Light/dark follows the phone's setting only; no on-page theme toggle.
+- Light/dark follows the phone's setting until the reader taps the header's sun/moon button (mirrors the app's); the choice is remembered on that device. (Changed by Dan on 2026-09-18; originally no toggle.)
 - No demo video, no analytics, no QR code, no link back from the app.
 - Members: four placeholder names, no photos (real names supplied later by the team).
 - Purpose and About: drafted from the codebase with bracketed placeholders for school / program / adviser / year; the team will paste the real abstract.

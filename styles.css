@@ -52,7 +52,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #000000;
     --bg-gradient: linear-gradient(180deg, #000000 0%, #3B1C0E 16%, #371817 30%, #2C1230 46%, #280D3A 62%, #1E0F28 78%, #110D13 92%, #000000 100%);
     --panel: #181818;
@@ -72,6 +72,27 @@
     --cta-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
     color-scheme: dark;
   }
+}
+/* the header button forces a theme; the tokens are the same as above */
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --bg-gradient: linear-gradient(180deg, #000000 0%, #3B1C0E 16%, #371817 30%, #2C1230 46%, #280D3A 62%, #1E0F28 78%, #110D13 92%, #000000 100%);
+  --panel: #181818;
+  --panel-2: #262626;
+  --ink: #F0F0F0;
+  --ink-2: #C9C4D2;
+  --ink-3: #9C97AA;
+  --line: rgba(240, 240, 240, 0.14);
+  --sign-tint: rgba(255, 107, 1, 0.14);
+  --hear-tint: rgba(108, 99, 255, 0.16);
+  --bezel: #0A0A0C;
+  --shadow: 0 22px 44px -18px rgba(0, 0, 0, 0.7);
+  --header-bg: rgba(12, 8, 14, 0.72);
+  --accent-text: #FF8A3D;
+  --purple-text: #9D97FF;
+  --selection: rgba(255, 107, 1, 0.38);
+  --cta-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
+  color-scheme: dark;
 }
 
 /* ------------------------------------------------------------ base */
@@ -153,6 +174,24 @@ section > h2, .part > h3 { margin-top: 0; }
 }
 .lang button[aria-pressed="true"] { background: var(--orange); color: var(--on-orange); }
 .lang button:active { transform: scale(0.96); }
+
+.theme {
+  appearance: none; border: 1px solid var(--line); background: var(--panel-2); color: var(--accent-text);
+  width: 38px; height: 38px; border-radius: 50%; display: inline-grid; place-items: center; cursor: pointer; padding: 0;
+  transition: transform 160ms var(--ease-out), background-color 160ms ease;
+}
+.theme .ic { width: 1.3em; height: 1.3em; }
+.theme:active { transform: scale(0.94); }
+/* like the app: the icon is the theme you will switch TO — moon in light, sun in dark */
+.theme .i-sun { display: none; color: var(--orange); }
+.theme .i-moon { display: block; color: #9810FA; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme .i-sun { display: block; }
+  :root:not([data-theme="light"]) .theme .i-moon { display: none; }
+}
+:root[data-theme="dark"] .theme .i-sun { display: block; }
+:root[data-theme="dark"] .theme .i-moon { display: none; }
+body { transition: background-color 200ms ease, color 200ms ease; }
 
 .pill {
   display: inline-flex; align-items: center; gap: 8px;
@@ -357,7 +396,7 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
 @media print {
   html { scroll-behavior: auto; }
   body { background: #fff !important; color: #000; font-size: 10.5pt; line-height: 1.45; }
-  .top, .cover, .purpose, .about, .foot, .walk-side, .vocab-tools, .manual-toc, .verify summary, .pill { display: none !important; }
+  .top, .cover, .purpose, .about, .foot, .walk-side, .vocab-tools, .manual-toc, .verify summary, .pill, .theme { display: none !important; }
   [lang="fil"] { display: none !important; }
   .wrap { width: 100%; }
   .walk { display: block; }

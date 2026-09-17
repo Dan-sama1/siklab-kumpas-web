@@ -16,11 +16,38 @@
     });
     if (persist) { try { localStorage.setItem('sk-lang', lang); } catch (e) {} }
     updateSearchStatus();
+    if (typeof labelTheme === 'function') labelTheme();
   }
   langButtons.forEach(function (b) {
     b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang'), true); });
   });
   setLang(root.getAttribute('data-lang') === 'fil' ? 'fil' : 'en', false);
+
+  // ------------------------------------------------------------ theme
+  // Follows the phone until the reader taps the button; then the choice is
+  // remembered. The tap flips whatever is currently showing.
+  var themeBtn = document.getElementById('theme');
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() {
+    var forced = root.getAttribute('data-theme');
+    return forced ? forced === 'dark' : systemDark.matches;
+  }
+  function labelTheme() {
+    if (!themeBtn) return;
+    var fil = root.getAttribute('data-lang') === 'fil';
+    themeBtn.setAttribute('aria-label', isDark()
+      ? (fil ? 'Lumipat sa maliwanag na tema' : 'Switch to the light theme')
+      : (fil ? 'Lumipat sa madilim na tema' : 'Switch to the dark theme'));
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('sk-theme', next); } catch (e) {}
+      labelTheme();
+    });
+    labelTheme();
+  }
 
   // ------------------------------------------------------------ header pill
   var pill = document.getElementById('pill');

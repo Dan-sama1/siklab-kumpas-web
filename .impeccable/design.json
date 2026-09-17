@@ -4,41 +4,227 @@
   "title": "Design System: Siklab-Kumpas site",
   "extensions": {
     "colorMeta": {
-      "spark-orange": { "role": "primary", "displayName": "Spark Orange", "canonical": "#FF6B01", "tonalRamp": ["#3D1900", "#6B2C00", "#994000", "#C24E00", "#FF6B01", "#FF8A3D", "#FFB27A", "#FFE1C9"] },
-      "spark-ink": { "role": "primary", "displayName": "Spark Ink", "canonical": "#C24E00", "tonalRamp": ["#3D1900", "#6B2C00", "#994000", "#C24E00", "#E05B00", "#FF6B01", "#FF9A55", "#FFDCC2"] },
-      "on-orange": { "role": "primary", "displayName": "On-Orange Ink", "canonical": "#1A1A2E", "tonalRamp": ["#0B0B14", "#1A1A2E", "#2E2E4A", "#4B4860", "#6E6A80", "#9C97AA", "#C9C4D2", "#F0F0F0"] },
-      "avatar-purple": { "role": "secondary", "displayName": "Avatar Purple", "canonical": "#6C63FF", "tonalRamp": ["#141240", "#26237A", "#3B34B3", "#4B43D6", "#6C63FF", "#9D97FF", "#C4C0FF", "#E9E8FF"] },
-      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1A1A2E", "tonalRamp": ["#0B0B14", "#1A1A2E", "#2E2E4A", "#4B4860", "#5E5A70", "#9C97AA", "#C9C4D2", "#F0F0F0"] },
-      "light-ground": { "role": "neutral", "displayName": "Lavender Wash", "canonical": "#F0F0F0", "tonalRamp": ["#2C1230", "#5A2E5E", "#8E5A92", "#C39AC6", "#F0D8F0", "#F5E3F4", "#FBDFD5", "#FFF3EA"] },
-      "dark-ground": { "role": "neutral", "displayName": "Ember Black", "canonical": "#000000", "tonalRamp": ["#000000", "#110D13", "#1E0F28", "#280D3A", "#2C1230", "#371817", "#3B1C0E", "#5A2E1A"] },
-      "light-panel": { "role": "neutral", "displayName": "Panel White", "canonical": "#FFFFFF", "tonalRamp": ["#262626", "#4A4A4A", "#7A7A7A", "#B0B0B0", "#D9D9D9", "#EDEDED", "#F7F1F7", "#FFFFFF"] },
-      "dark-panel": { "role": "neutral", "displayName": "Panel Charcoal", "canonical": "#181818", "tonalRamp": ["#0A0A0C", "#181818", "#262626", "#3A3A3A", "#575757", "#7A7A7A", "#B0B0B0", "#E0E0E0"] }
+      "spark-orange": {
+        "role": "primary",
+        "displayName": "Spark Orange",
+        "canonical": "#FF6B01",
+        "tonalRamp": [
+          "#3D1900",
+          "#6B2C00",
+          "#994000",
+          "#C24E00",
+          "#FF6B01",
+          "#FF8A3D",
+          "#FFB27A",
+          "#FFE1C9"
+        ]
+      },
+      "spark-ink": {
+        "role": "primary",
+        "displayName": "Spark Ink",
+        "canonical": "#C24E00",
+        "tonalRamp": [
+          "#3D1900",
+          "#6B2C00",
+          "#994000",
+          "#C24E00",
+          "#E05B00",
+          "#FF6B01",
+          "#FF9A55",
+          "#FFDCC2"
+        ]
+      },
+      "on-orange": {
+        "role": "primary",
+        "displayName": "On-Orange Ink",
+        "canonical": "#1A1A2E",
+        "tonalRamp": [
+          "#0B0B14",
+          "#1A1A2E",
+          "#2E2E4A",
+          "#4B4860",
+          "#6E6A80",
+          "#9C97AA",
+          "#C9C4D2",
+          "#F0F0F0"
+        ]
+      },
+      "avatar-purple": {
+        "role": "secondary",
+        "displayName": "Avatar Purple",
+        "canonical": "#6C63FF",
+        "tonalRamp": [
+          "#141240",
+          "#26237A",
+          "#3B34B3",
+          "#4B43D6",
+          "#6C63FF",
+          "#9D97FF",
+          "#C4C0FF",
+          "#E9E8FF"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1A1A2E",
+        "tonalRamp": [
+          "#0B0B14",
+          "#1A1A2E",
+          "#2E2E4A",
+          "#4B4860",
+          "#5E5A70",
+          "#9C97AA",
+          "#C9C4D2",
+          "#F0F0F0"
+        ]
+      },
+      "light-ground": {
+        "role": "neutral",
+        "displayName": "Lavender Wash",
+        "canonical": "#F0F0F0",
+        "tonalRamp": [
+          "#2C1230",
+          "#5A2E5E",
+          "#8E5A92",
+          "#C39AC6",
+          "#F0D8F0",
+          "#F5E3F4",
+          "#FBDFD5",
+          "#FFF3EA"
+        ]
+      },
+      "dark-ground": {
+        "role": "neutral",
+        "displayName": "Ember Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#110D13",
+          "#1E0F28",
+          "#280D3A",
+          "#2C1230",
+          "#371817",
+          "#3B1C0E",
+          "#5A2E1A"
+        ]
+      },
+      "light-panel": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#262626",
+          "#4A4A4A",
+          "#7A7A7A",
+          "#B0B0B0",
+          "#D9D9D9",
+          "#EDEDED",
+          "#F7F1F7",
+          "#FFFFFF"
+        ]
+      },
+      "dark-panel": {
+        "role": "neutral",
+        "displayName": "Panel Charcoal",
+        "canonical": "#181818",
+        "tonalRamp": [
+          "#0A0A0C",
+          "#181818",
+          "#262626",
+          "#3A3A3A",
+          "#575757",
+          "#7A7A7A",
+          "#B0B0B0",
+          "#E0E0E0"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The cover title only." },
-      "headline": { "displayName": "Headline", "purpose": "Section headings: Purpose, Download, Install steps, User manual, About." },
-      "title": { "displayName": "Title", "purpose": "Manual parts (with numeral) and install-step titles." },
-      "subtitle": { "displayName": "Subtitle", "purpose": "Step headings inside a manual part; turns Spark Ink while active." },
-      "body": { "displayName": "Body", "purpose": "All copy, 66ch measure." },
-      "label": { "displayName": "Label", "purpose": "MEMBERS and SHA-256 labels only." },
-      "gloss": { "displayName": "Gloss", "purpose": "Vocabulary entries, as the app prints them." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "The cover title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings: Purpose, Download, Install steps, User manual, About."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Manual parts (with numeral) and install-step titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Step headings inside a manual part; turns Spark Ink while active."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All copy, 66ch measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "MEMBERS and SHA-256 labels only."
+      },
+      "gloss": {
+        "displayName": "Gloss",
+        "purpose": "Vocabulary entries, as the app prints them."
+      }
     },
     "shadows": [
-      { "name": "phone", "value": "0 18px 40px -18px rgba(44, 18, 48, 0.45)", "purpose": "The phone bezel on the light wash; 0 22px 44px -18px rgba(0,0,0,0.7) in the dark theme." },
-      { "name": "cta", "value": "0 16px 34px -14px rgba(255, 107, 1, 0.55)", "purpose": "Download button and header pill on the light wash; 0 16px 34px -14px rgba(0,0,0,0.7) in the dark theme." }
+      {
+        "name": "phone",
+        "value": "0 18px 40px -18px rgba(44, 18, 48, 0.45)",
+        "purpose": "The phone bezel on the light wash; 0 22px 44px -18px rgba(0,0,0,0.7) in the dark theme."
+      },
+      {
+        "name": "cta",
+        "value": "0 16px 34px -14px rgba(255, 107, 1, 0.55)",
+        "purpose": "Download button and header pill on the light wash; 0 16px 34px -14px rgba(0,0,0,0.7) in the dark theme."
+      }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Every entrance, press and swap." },
-      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Reserved for on-screen movement; unused so far." },
-      { "name": "press", "value": "transform 160ms", "purpose": "Buttons, pills and chips scale to 0.97 on :active." },
-      { "name": "stage-swap", "value": "opacity 220ms, filter 220ms (blur 2px)", "purpose": "The sticky phone crossfades to the next screen; instant under prefers-reduced-motion." }
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Every entrance, press and swap."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Reserved for on-screen movement; unused so far."
+      },
+      {
+        "name": "press",
+        "value": "transform 160ms",
+        "purpose": "Buttons, pills and chips scale to 0.97 on :active."
+      },
+      {
+        "name": "stage-swap",
+        "value": "opacity 220ms, filter 220ms (blur 2px)",
+        "purpose": "The sticky phone crossfades to the next screen; instant under prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "phone-narrow", "value": "480px" },
-      { "name": "phone", "value": "720px" },
-      { "name": "header-wrap", "value": "860px" },
-      { "name": "two-column", "value": "1000px" },
-      { "name": "wide", "value": "1200px" }
+      {
+        "name": "phone-narrow",
+        "value": "480px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      },
+      {
+        "name": "header-wrap",
+        "value": "860px"
+      },
+      {
+        "name": "two-column",
+        "value": "1000px"
+      },
+      {
+        "name": "wide",
+        "value": "1200px"
+      }
     ]
   },
   "components": [
@@ -117,7 +303,7 @@
   ],
   "narrative": {
     "northStar": "The Phone in Your Hand",
-    "overview": "The site is the app's own material, not a brochure about it. It inherits Siklab-Kumpas's two grounds — black lit from within by an ember gradient in the dark, a lavender-and-peach wash in the light — and its one accent, the spark orange the app spends on every button. The page follows the phone's light/dark setting and never offers its own switch, so what a respondent sees on the site is the world they will meet inside the app a minute later.\n\nEverything is arranged around a phone frame. On a laptop the frame stays put at the right while the instructions scroll past it, swapping its screen to whichever step is nearest the reading line; on a phone the frame sits inline under each step heading, before the words that tell the reader what to tap. Text is short, second-person and bilingual (English default, Filipino by toggle), set in a single friendly sans at a generous size, because the primary reader is a Deaf or hearing respondent who is not technical and may be reading their second language outdoors.\n\nDensity is calm: one column of copy held to a 66-character measure, section spacing that breathes, and a single moment of motion (the frame's crossfade). Confirmed rejections: no marketing hero, no white text on the brand orange (it fails contrast), no on-page theme toggle, no kickers or eyebrow labels, no emoji or glyph icons.",
+    "overview": "The site is the app's own material, not a brochure about it. It inherits Siklab-Kumpas's two grounds — black lit from within by an ember gradient in the dark, a lavender-and-peach wash in the light — and its one accent, the spark orange the app spends on every button. The page follows the phone's light/dark setting, with the app's own sun/moon button in the header to override it, so what a respondent sees on the site is the world they will meet inside the app a minute later.\n\nEverything is arranged around a phone frame. On a laptop the frame stays put at the right while the instructions scroll past it, swapping its screen to whichever step is nearest the reading line; on a phone the frame sits inline under each step heading, before the words that tell the reader what to tap. Text is short, second-person and bilingual (English default, Filipino by toggle), set in a single friendly sans at a generous size, because the primary reader is a Deaf or hearing respondent who is not technical and may be reading their second language outdoors.\n\nDensity is calm: one column of copy held to a 66-character measure, section spacing that breathes, and a single moment of motion (the frame's crossfade). Confirmed rejections: no marketing hero, no white text on the brand orange (it fails contrast), no kickers or eyebrow labels, no emoji or glyph icons.",
     "keyCharacteristics": [
       "The app's exact gradient stops for both grounds; orange is the only accent, purple appears solely for the hearing person's lane",
       "A dark-bezel phone frame (9:20, 34px radius) is the recurring container for every screenshot",
@@ -126,12 +312,36 @@
       "Both languages live in the HTML; a toggle shows one, so the page reads without JavaScript and prints in English"
     ],
     "rules": [
-      { "name": "The Ink-on-Orange Rule", "body": "Spark Orange never carries white text. Anything set on it — button label, numeral, toggle — is On-Orange ink.", "section": "colors" },
-      { "name": "The One Purple Rule", "body": "Purple marks the hearing person's lane and nothing else; the signer's lane and every action stay orange.", "section": "colors" },
-      { "name": "The Phone Decides Rule", "body": "Light or dark follows prefers-color-scheme; the page ships no theme control of its own.", "section": "colors" },
-      { "name": "The One Face Rule", "body": "Figtree carries every role; a second face would be a second voice the app does not have.", "section": "typography" },
-      { "name": "The Sixty-Six Rule", "body": "Paragraphs and lists never exceed 66ch, at every breakpoint.", "section": "typography" },
-      { "name": "The Two Shadows Rule", "body": "Only the phone and the call-to-action are lifted; everything else is flat on the ground.", "section": "elevation" }
+      {
+        "name": "The Ink-on-Orange Rule",
+        "body": "Spark Orange never carries white text. Anything set on it — button label, numeral, toggle — is On-Orange ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Purple Rule",
+        "body": "Purple marks the hearing person's lane and nothing else; the signer's lane and every action stay orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Phone Decides First Rule",
+        "body": "Light or dark follows prefers-color-scheme until the reader taps the sun/moon button; a forced theme is stored per device (data-theme on <html>), and both themes use the same token set.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "Figtree carries every role; a second face would be a second voice the app does not have.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sixty-Six Rule",
+        "body": "Paragraphs and lists never exceed 66ch, at every breakpoint.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Shadows Rule",
+        "body": "Only the phone and the call-to-action are lifted; everything else is flat on the ground.",
+        "section": "elevation"
+      }
     ],
     "dos": [
       "Do set anything on Spark Orange in On-Orange ink (#1A1A2E); white on the orange is 2.9:1.",
@@ -141,7 +351,7 @@
       "Do animate only transform, opacity and filter, ≤250ms, with cubic-bezier(0.23,1,0.32,1), and honour prefers-reduced-motion."
     ],
     "donts": [
-      "Don't add a theme toggle; the phone's setting decides.",
+      "Don't add a second theme control; the header's sun/moon button is the only one, and it must keep the app's icon logic (moon in light, sun in dark).",
       "Don't introduce a second accent — purple exists only for the hearing person's lane.",
       "Don't use kickers, eyebrow labels, gradient text, coloured side stripes, hard offset shadows, or emoji/glyph icons; icons are drawn 24px SVG at 2px round stroke.",
       "Don't shadow panels, chips or tiles; only the phone and the call-to-action are lifted.",

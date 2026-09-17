@@ -138,11 +138,11 @@ components:
 
 **Creative North Star: "The Phone in Your Hand"**
 
-The site is the app's own material, not a brochure about it. It inherits Siklab-Kumpas's two grounds — black lit from within by an ember gradient in the dark, a lavender-and-peach wash in the light — and its one accent, the spark orange the app spends on every button. The page follows the phone's light/dark setting and never offers its own switch, so what a respondent sees on the site is the world they will meet inside the app a minute later.
+The site is the app's own material, not a brochure about it. It inherits Siklab-Kumpas's two grounds — black lit from within by an ember gradient in the dark, a lavender-and-peach wash in the light — and its one accent, the spark orange the app spends on every button. The page follows the phone's light/dark setting, with the app's own sun/moon button in the header to override it, so what a respondent sees on the site is the world they will meet inside the app a minute later.
 
 Everything is arranged around a phone frame. On a laptop the frame stays put at the right while the instructions scroll past it, swapping its screen to whichever step is nearest the reading line; on a phone the frame sits inline under each step heading, before the words that tell the reader what to tap. Text is short, second-person and bilingual (English default, Filipino by toggle), set in a single friendly sans at a generous size, because the primary reader is a Deaf or hearing respondent who is not technical and may be reading their second language outdoors.
 
-Density is calm: one column of copy held to a 66-character measure, section spacing that breathes, and a single moment of motion (the frame's crossfade). Confirmed rejections: no marketing hero, no white text on the brand orange (it fails contrast), no on-page theme toggle, no kickers or eyebrow labels, no emoji or glyph icons.
+Density is calm: one column of copy held to a 66-character measure, section spacing that breathes, and a single moment of motion (the frame's crossfade). Confirmed rejections: no marketing hero, no white text on the brand orange (it fails contrast), no kickers or eyebrow labels, no emoji or glyph icons.
 
 **Key Characteristics:**
 - The app's exact gradient stops for both grounds; orange is the only accent, purple appears solely for the hearing person's lane
@@ -175,7 +175,7 @@ Two grounds from the app, one spark, and a reserved purple; everything else is i
 ### Named Rules
 **The Ink-on-Orange Rule.** Spark Orange never carries white text. Anything set on it — button label, numeral, toggle — is On-Orange ink.
 **The One Purple Rule.** Purple marks the hearing person's lane and nothing else; the signer's lane and every action stay orange.
-**The Phone Decides Rule.** Light or dark follows `prefers-color-scheme`; the page ships no theme control of its own.
+**The Phone Decides First Rule.** Light or dark follows `prefers-color-scheme` until the reader taps the sun/moon button; a forced theme is stored per device (`data-theme` on `<html>`), and both themes use the same token set.
 
 ## Typography
 
@@ -246,7 +246,7 @@ Rounded, in the app's proportions: chips and toggles are full pills (999px); til
 - **Status:** a live-region line under the field states the match count in the current language.
 
 ### Navigation
-- **Style:** sticky translucent header — app icon (34px, 9px radius) + name at 800, section links at 600 in Ink 2 with an orange-tint hover, the EN | FIL segmented control and the download pill at the right. Under 860px the links move to a second scrollable row; under 480px the pill drops its label.
+- **Style:** sticky translucent header — app icon (34px, 9px radius) + name at 800, section links at 600 in Ink 2 with an orange-tint hover, then the 38px round sun/moon theme button (moon in purple #9810FA on light, sun in orange on dark), the EN | FIL segmented control and the download pill at the right. Under 860px the links move to a second scrollable row; under 480px the pill drops its label.
 
 ### Phone Frame (signature)
 A `figure.phone`: 236px wide inline, 280–300px as the sticky stage; bezel padding 8px, screenshot at 9:20 with `object-fit: cover`, a caption pinned to the bottom over a black gradient, and a "Screenshot coming / Paparating ang screenshot" pill while the frame carries `data-placeholder`. The stage crossfades between screens (opacity + 2px blur, 220ms ease-out, two stacked images so the old screen stays until the new one is painted), dims to 35% when the copy no longer refers to a screen, and swaps instantly under `prefers-reduced-motion`.
@@ -264,7 +264,7 @@ A `figure.phone`: 236px wide inline, 280–300px as the sticky stage; bezel padd
 - **Do** animate only transform, opacity and filter, ≤250ms, with `cubic-bezier(0.23,1,0.32,1)`, and honour `prefers-reduced-motion`.
 
 ### Don't:
-- **Don't** add a theme toggle; the phone's setting decides.
+- **Don't** add a second theme control; the header's sun/moon button is the only one, and it must keep the app's icon logic (moon in light, sun in dark).
 - **Don't** introduce a second accent — purple exists only for the hearing person's lane.
 - **Don't** use kickers, eyebrow labels, gradient text, coloured side stripes, hard offset shadows, or emoji/glyph icons; icons are drawn 24px SVG at 2px round stroke.
 - **Don't** shadow panels, chips or tiles; only the phone and the call-to-action are lifted.

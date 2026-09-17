@@ -18,6 +18,8 @@
   try {
     var l = localStorage.getItem('sk-lang');
     if (l === 'fil' || l === 'en') { document.documentElement.setAttribute('data-lang', l); document.documentElement.setAttribute('lang', l); }
+    var t = localStorage.getItem('sk-theme');
+    if (t === 'dark' || t === 'light') { document.documentElement.setAttribute('data-theme', t); }
   } catch (e) {}
   document.documentElement.classList.add('js');
 </script>
@@ -33,6 +35,7 @@
     <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></symbol>
     <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></symbol>
     <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M10.3 3h3.4l.5 2.3a7 7 0 0 1 1.9 1.1l2.2-.8 1.7 3-1.7 1.5a7 7 0 0 1 0 2.2l1.7 1.5-1.7 3-2.2-.8a7 7 0 0 1-1.9 1.1L13.7 21h-3.4l-.5-2.3a7 7 0 0 1-1.9-1.1l-2.2.8-1.7-3 1.7-1.5a7 7 0 0 1 0-2.2L4 10.2l1.7-3 2.2.8a7 7 0 0 1 1.9-1.1L10.3 3Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
     <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V6.5a1.5 1.5 0 0 1 3 0V12M11 12V4.5a1.5 1.5 0 0 1 3 0V12M14 12V6a1.5 1.5 0 0 1 3 0v8.5c0 3.6-2.5 6.5-6 6.5-2.6 0-4.3-1.3-5.4-3.3L3.9 14.6a1.5 1.5 0 0 1 2.5-1.6L8 15"/></symbol>
     <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4ZM16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
@@ -55,6 +58,10 @@
     <a href="#vocabulary"><span lang="en">Words</span><span lang="fil">Mga salita</span></a>
   </nav>
   <div class="top-actions">
+    <button type="button" class="theme" id="theme" aria-label="Switch theme">
+      <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      <svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+    </button>
     <a class="pill" id="pill" href="https://github.com/Dan-sama1/siklab-kumpas-web/releases/latest/download/siklab-kumpas.apk" hidden>
       <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
       <span lang="en">Download</span><span lang="fil">I-download</span>
