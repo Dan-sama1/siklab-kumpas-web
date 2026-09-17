@@ -1,0 +1,1205 @@
+{
+  "generated": "2026-09-17",
+  "source": {
+    "fsl": "assets/labels/fsl105_labels.txt",
+    "letters": "assets/labels/fsl_letters_labels.txt",
+    "asl": "assets/labels/asl_demo50_labels.txt",
+    "avatar": "assets/avatar/clips/manifest.json"
+  },
+  "fsl": {
+    "count": 105,
+    "groups": [
+      {
+        "en": "Greetings and courtesy",
+        "fil": "Pagbati at paggalang",
+        "words": [
+          {
+            "gloss": "GOOD MORNING",
+            "fil": "Magandang umaga"
+          },
+          {
+            "gloss": "GOOD AFTERNOON",
+            "fil": "Magandang hapon"
+          },
+          {
+            "gloss": "GOOD EVENING",
+            "fil": "Magandang gabi"
+          },
+          {
+            "gloss": "HELLO",
+            "fil": "Kumusta"
+          },
+          {
+            "gloss": "HOW ARE YOU",
+            "fil": "Kumusta ka?"
+          },
+          {
+            "gloss": "IM FINE",
+            "fil": "Mabuti naman ako"
+          },
+          {
+            "gloss": "NICE TO MEET YOU",
+            "fil": "Ikinagagalak kitang makilala"
+          },
+          {
+            "gloss": "THANK YOU",
+            "fil": "Salamat"
+          },
+          {
+            "gloss": "YOURE WELCOME",
+            "fil": "Walang anuman"
+          },
+          {
+            "gloss": "SEE YOU TOMORROW",
+            "fil": "Kita tayo bukas"
+          }
+        ]
+      },
+      {
+        "en": "Replies",
+        "fil": "Mga tugon",
+        "words": [
+          {
+            "gloss": "UNDERSTAND",
+            "fil": "Naiintindihan"
+          },
+          {
+            "gloss": "DONT UNDERSTAND",
+            "fil": "Hindi naiintindihan"
+          },
+          {
+            "gloss": "KNOW",
+            "fil": "Alam"
+          },
+          {
+            "gloss": "DONT KNOW",
+            "fil": "Hindi alam"
+          },
+          {
+            "gloss": "NO",
+            "fil": "Hindi"
+          },
+          {
+            "gloss": "YES",
+            "fil": "Oo"
+          },
+          {
+            "gloss": "WRONG",
+            "fil": "Mali"
+          },
+          {
+            "gloss": "CORRECT",
+            "fil": "Tama"
+          },
+          {
+            "gloss": "SLOW",
+            "fil": "Mabagal"
+          },
+          {
+            "gloss": "FAST",
+            "fil": "Mabilis"
+          }
+        ]
+      },
+      {
+        "en": "Numbers",
+        "fil": "Mga bilang",
+        "words": [
+          {
+            "gloss": "ONE",
+            "fil": "Isa"
+          },
+          {
+            "gloss": "TWO",
+            "fil": "Dalawa"
+          },
+          {
+            "gloss": "THREE",
+            "fil": "Tatlo"
+          },
+          {
+            "gloss": "FOUR",
+            "fil": "Apat"
+          },
+          {
+            "gloss": "FIVE",
+            "fil": "Lima"
+          },
+          {
+            "gloss": "SIX",
+            "fil": "Anim"
+          },
+          {
+            "gloss": "SEVEN",
+            "fil": "Pito"
+          },
+          {
+            "gloss": "EIGHT",
+            "fil": "Walo"
+          },
+          {
+            "gloss": "NINE",
+            "fil": "Siyam"
+          },
+          {
+            "gloss": "TEN",
+            "fil": "Sampu"
+          }
+        ]
+      },
+      {
+        "en": "Months",
+        "fil": "Mga buwan",
+        "words": [
+          {
+            "gloss": "JANUARY",
+            "fil": "Enero"
+          },
+          {
+            "gloss": "FEBRUARY",
+            "fil": "Pebrero"
+          },
+          {
+            "gloss": "MARCH",
+            "fil": "Marso"
+          },
+          {
+            "gloss": "APRIL",
+            "fil": "Abril"
+          },
+          {
+            "gloss": "MAY",
+            "fil": "Mayo"
+          },
+          {
+            "gloss": "JUNE",
+            "fil": "Hunyo"
+          },
+          {
+            "gloss": "JULY",
+            "fil": "Hulyo"
+          },
+          {
+            "gloss": "AUGUST",
+            "fil": "Agosto"
+          },
+          {
+            "gloss": "SEPTEMBER",
+            "fil": "Setyembre"
+          },
+          {
+            "gloss": "OCTOBER",
+            "fil": "Oktubre"
+          },
+          {
+            "gloss": "NOVEMBER",
+            "fil": "Nobyembre"
+          },
+          {
+            "gloss": "DECEMBER",
+            "fil": "Disyembre"
+          }
+        ]
+      },
+      {
+        "en": "Days of the week",
+        "fil": "Mga araw ng linggo",
+        "words": [
+          {
+            "gloss": "MONDAY",
+            "fil": "Lunes"
+          },
+          {
+            "gloss": "TUESDAY",
+            "fil": "Martes"
+          },
+          {
+            "gloss": "WEDNESDAY",
+            "fil": "Miyerkules"
+          },
+          {
+            "gloss": "THURSDAY",
+            "fil": "Huwebes"
+          },
+          {
+            "gloss": "FRIDAY",
+            "fil": "Biyernes"
+          },
+          {
+            "gloss": "SATURDAY",
+            "fil": "Sabado"
+          },
+          {
+            "gloss": "SUNDAY",
+            "fil": "Linggo"
+          }
+        ]
+      },
+      {
+        "en": "Time",
+        "fil": "Panahon",
+        "words": [
+          {
+            "gloss": "TODAY",
+            "fil": "Ngayong araw"
+          },
+          {
+            "gloss": "TOMORROW",
+            "fil": "Bukas"
+          },
+          {
+            "gloss": "YESTERDAY",
+            "fil": "Kahapon"
+          }
+        ]
+      },
+      {
+        "en": "Family and people",
+        "fil": "Pamilya at mga tao",
+        "words": [
+          {
+            "gloss": "FATHER",
+            "fil": "Tatay"
+          },
+          {
+            "gloss": "MOTHER",
+            "fil": "Nanay"
+          },
+          {
+            "gloss": "SON",
+            "fil": "Anak na lalaki"
+          },
+          {
+            "gloss": "DAUGHTER",
+            "fil": "Anak na babae"
+          },
+          {
+            "gloss": "GRANDFATHER",
+            "fil": "Lolo"
+          },
+          {
+            "gloss": "GRANDMOTHER",
+            "fil": "Lola"
+          },
+          {
+            "gloss": "UNCLE",
+            "fil": "Tiyo"
+          },
+          {
+            "gloss": "AUNTIE",
+            "fil": "Tiya"
+          },
+          {
+            "gloss": "COUSIN",
+            "fil": "Pinsan"
+          },
+          {
+            "gloss": "PARENTS",
+            "fil": "Mga magulang"
+          },
+          {
+            "gloss": "BOY",
+            "fil": "Batang lalaki"
+          },
+          {
+            "gloss": "GIRL",
+            "fil": "Batang babae"
+          },
+          {
+            "gloss": "MAN",
+            "fil": "Lalaki"
+          },
+          {
+            "gloss": "WOMAN",
+            "fil": "Babae"
+          }
+        ]
+      },
+      {
+        "en": "Community",
+        "fil": "Komunidad",
+        "words": [
+          {
+            "gloss": "DEAF",
+            "fil": "Bingi"
+          },
+          {
+            "gloss": "HARD OF HEARING",
+            "fil": "Mahina ang pandinig"
+          },
+          {
+            "gloss": "WHEELCHAIR PERSON",
+            "fil": "Taong naka-wheelchair"
+          },
+          {
+            "gloss": "BLIND",
+            "fil": "Bulag"
+          },
+          {
+            "gloss": "DEAF BLIND",
+            "fil": "Bingi at bulag"
+          },
+          {
+            "gloss": "MARRIED",
+            "fil": "Kasal"
+          }
+        ]
+      },
+      {
+        "en": "Colours",
+        "fil": "Mga kulay",
+        "words": [
+          {
+            "gloss": "BLUE",
+            "fil": "Asul"
+          },
+          {
+            "gloss": "GREEN",
+            "fil": "Berde"
+          },
+          {
+            "gloss": "RED",
+            "fil": "Pula"
+          },
+          {
+            "gloss": "BROWN",
+            "fil": "Kayumanggi"
+          },
+          {
+            "gloss": "BLACK",
+            "fil": "Itim"
+          },
+          {
+            "gloss": "WHITE",
+            "fil": "Puti"
+          },
+          {
+            "gloss": "YELLOW",
+            "fil": "Dilaw"
+          },
+          {
+            "gloss": "ORANGE",
+            "fil": "Kahel"
+          },
+          {
+            "gloss": "GRAY",
+            "fil": "Abo"
+          },
+          {
+            "gloss": "PINK",
+            "fil": "Rosas"
+          },
+          {
+            "gloss": "VIOLET",
+            "fil": "Lila"
+          },
+          {
+            "gloss": "LIGHT",
+            "fil": "Maliwanag"
+          },
+          {
+            "gloss": "DARK",
+            "fil": "Madilim"
+          }
+        ]
+      },
+      {
+        "en": "Food and drink",
+        "fil": "Pagkain at inumin",
+        "words": [
+          {
+            "gloss": "BREAD",
+            "fil": "Tinapay"
+          },
+          {
+            "gloss": "EGG",
+            "fil": "Itlog"
+          },
+          {
+            "gloss": "FISH",
+            "fil": "Isda"
+          },
+          {
+            "gloss": "MEAT",
+            "fil": "Karne"
+          },
+          {
+            "gloss": "CHICKEN",
+            "fil": "Manok"
+          },
+          {
+            "gloss": "SPAGHETTI",
+            "fil": "Ispageti"
+          },
+          {
+            "gloss": "RICE",
+            "fil": "Kanin"
+          },
+          {
+            "gloss": "LONGANISA",
+            "fil": "Longganisa"
+          },
+          {
+            "gloss": "SHRIMP",
+            "fil": "Hipon"
+          },
+          {
+            "gloss": "CRAB",
+            "fil": "Alimango"
+          },
+          {
+            "gloss": "HOT",
+            "fil": "Mainit"
+          },
+          {
+            "gloss": "COLD",
+            "fil": "Malamig"
+          },
+          {
+            "gloss": "JUICE",
+            "fil": "Juice"
+          },
+          {
+            "gloss": "MILK",
+            "fil": "Gatas"
+          },
+          {
+            "gloss": "COFFEE",
+            "fil": "Kape"
+          },
+          {
+            "gloss": "TEA",
+            "fil": "Tsaa"
+          },
+          {
+            "gloss": "BEER",
+            "fil": "Serbesa"
+          },
+          {
+            "gloss": "WINE",
+            "fil": "Alak"
+          },
+          {
+            "gloss": "SUGAR",
+            "fil": "Asukal"
+          },
+          {
+            "gloss": "NO SUGAR",
+            "fil": "Walang asukal"
+          }
+        ]
+      }
+    ]
+  },
+  "letters": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "asl": {
+    "count": 56,
+    "words": [
+      {
+        "gloss": "AFTERNOON",
+        "fil": "Hapon"
+      },
+      {
+        "gloss": "ANYONE",
+        "fil": "Kahit sino"
+      },
+      {
+        "gloss": "BIG",
+        "fil": "Malaki"
+      },
+      {
+        "gloss": "BORED",
+        "fil": "Nababagot"
+      },
+      {
+        "gloss": "CAMERA",
+        "fil": "Kamera"
+      },
+      {
+        "gloss": "CAN",
+        "fil": "Kaya / puwede"
+      },
+      {
+        "gloss": "CAR",
+        "fil": "Kotse"
+      },
+      {
+        "gloss": "CLOTHES",
+        "fil": "Damit"
+      },
+      {
+        "gloss": "CONTINUE",
+        "fil": "Magpatuloy"
+      },
+      {
+        "gloss": "DANCE",
+        "fil": "Sayaw"
+      },
+      {
+        "gloss": "DARK",
+        "fil": "Madilim"
+      },
+      {
+        "gloss": "DAY",
+        "fil": "Araw"
+      },
+      {
+        "gloss": "DREAM",
+        "fil": "Panaginip"
+      },
+      {
+        "gloss": "DRINK",
+        "fil": "Uminom"
+      },
+      {
+        "gloss": "EAT",
+        "fil": "Kumain"
+      },
+      {
+        "gloss": "FAMILY",
+        "fil": "Pamilya"
+      },
+      {
+        "gloss": "FATHER",
+        "fil": "Tatay"
+      },
+      {
+        "gloss": "FINE",
+        "fil": "Mabuti / ayos"
+      },
+      {
+        "gloss": "FINISH",
+        "fil": "Tapos"
+      },
+      {
+        "gloss": "FOLLOW",
+        "fil": "Sumunod"
+      },
+      {
+        "gloss": "FRIENDLY",
+        "fil": "Palakaibigan"
+      },
+      {
+        "gloss": "GIFT",
+        "fil": "Regalo"
+      },
+      {
+        "gloss": "GOOD",
+        "fil": "Mabuti"
+      },
+      {
+        "gloss": "HANDSOME",
+        "fil": "Guwapo"
+      },
+      {
+        "gloss": "HEADACHE",
+        "fil": "Sakit ng ulo"
+      },
+      {
+        "gloss": "HEALTH",
+        "fil": "Kalusugan"
+      },
+      {
+        "gloss": "HELLO",
+        "fil": "Kumusta"
+      },
+      {
+        "gloss": "HELP",
+        "fil": "Tulong"
+      },
+      {
+        "gloss": "HOW",
+        "fil": "Paano"
+      },
+      {
+        "gloss": "KNOW",
+        "fil": "Alam"
+      },
+      {
+        "gloss": "MANY",
+        "fil": "Marami"
+      },
+      {
+        "gloss": "MAYBE",
+        "fil": "Siguro"
+      },
+      {
+        "gloss": "ME",
+        "fil": "Ako"
+      },
+      {
+        "gloss": "MORE",
+        "fil": "Higit pa / dagdag"
+      },
+      {
+        "gloss": "MORNING",
+        "fil": "Umaga"
+      },
+      {
+        "gloss": "MOTHER",
+        "fil": "Nanay"
+      },
+      {
+        "gloss": "NEAR",
+        "fil": "Malapit"
+      },
+      {
+        "gloss": "NO",
+        "fil": "Hindi"
+      },
+      {
+        "gloss": "PAIN",
+        "fil": "Sakit"
+      },
+      {
+        "gloss": "PARENTS",
+        "fil": "Mga magulang"
+      },
+      {
+        "gloss": "PHONE",
+        "fil": "Telepono"
+      },
+      {
+        "gloss": "PICTURE",
+        "fil": "Larawan"
+      },
+      {
+        "gloss": "PIZZA",
+        "fil": "Pizza"
+      },
+      {
+        "gloss": "PLEASE",
+        "fil": "Pakiusap"
+      },
+      {
+        "gloss": "SAD",
+        "fil": "Malungkot"
+      },
+      {
+        "gloss": "SMART",
+        "fil": "Matalino"
+      },
+      {
+        "gloss": "SORRY",
+        "fil": "Paumanhin"
+      },
+      {
+        "gloss": "THANK YOU",
+        "fil": "Salamat"
+      },
+      {
+        "gloss": "TOY",
+        "fil": "Laruan"
+      },
+      {
+        "gloss": "UPSET",
+        "fil": "Naiinis"
+      },
+      {
+        "gloss": "WATER",
+        "fil": "Tubig"
+      },
+      {
+        "gloss": "WE",
+        "fil": "Tayo / kami"
+      },
+      {
+        "gloss": "WHY",
+        "fil": "Bakit"
+      },
+      {
+        "gloss": "YES",
+        "fil": "Oo"
+      },
+      {
+        "gloss": "YESTERDAY",
+        "fil": "Kahapon"
+      },
+      {
+        "gloss": "YOU",
+        "fil": "Ikaw"
+      }
+    ]
+  },
+  "avatar": {
+    "count": 112,
+    "letters": 26,
+    "words": [
+      {
+        "gloss": "AFTERNOON",
+        "fil": "Hapon"
+      },
+      {
+        "gloss": "AGAIN",
+        "fil": "Ulit"
+      },
+      {
+        "gloss": "ALWAYS",
+        "fil": "Palagi"
+      },
+      {
+        "gloss": "AND",
+        "fil": "At"
+      },
+      {
+        "gloss": "ANYONE",
+        "fil": "Kahit sino"
+      },
+      {
+        "gloss": "BAD",
+        "fil": "Masama"
+      },
+      {
+        "gloss": "BATHROOM",
+        "fil": "Banyo"
+      },
+      {
+        "gloss": "BECAUSE",
+        "fil": "Dahil / kasi"
+      },
+      {
+        "gloss": "BORED",
+        "fil": "Nababagot"
+      },
+      {
+        "gloss": "BOY",
+        "fil": "Batang lalaki"
+      },
+      {
+        "gloss": "BREAKFAST",
+        "fil": "Almusal"
+      },
+      {
+        "gloss": "BUT",
+        "fil": "Pero"
+      },
+      {
+        "gloss": "CAN",
+        "fil": "Kaya / puwede"
+      },
+      {
+        "gloss": "CLOTHES",
+        "fil": "Damit"
+      },
+      {
+        "gloss": "COLD",
+        "fil": "Malamig"
+      },
+      {
+        "gloss": "COME",
+        "fil": "Halika"
+      },
+      {
+        "gloss": "DEAF",
+        "fil": "Bingi"
+      },
+      {
+        "gloss": "DOCTOR",
+        "fil": "Doktor"
+      },
+      {
+        "gloss": "DRINK",
+        "fil": "Uminom"
+      },
+      {
+        "gloss": "EACH",
+        "fil": "Bawat"
+      },
+      {
+        "gloss": "EAT",
+        "fil": "Kumain"
+      },
+      {
+        "gloss": "EVERYDAY",
+        "fil": "Araw-araw"
+      },
+      {
+        "gloss": "FAMILY",
+        "fil": "Pamilya"
+      },
+      {
+        "gloss": "FATHER",
+        "fil": "Tatay"
+      },
+      {
+        "gloss": "FEEL",
+        "fil": "Pakiramdam"
+      },
+      {
+        "gloss": "FINE",
+        "fil": "Mabuti / ayos"
+      },
+      {
+        "gloss": "FINISH",
+        "fil": "Tapos"
+      },
+      {
+        "gloss": "FOR",
+        "fil": "Para"
+      },
+      {
+        "gloss": "FRIEND",
+        "fil": "Kaibigan"
+      },
+      {
+        "gloss": "GIRL",
+        "fil": "Batang babae"
+      },
+      {
+        "gloss": "GO",
+        "fil": "Pumunta"
+      },
+      {
+        "gloss": "GOOD",
+        "fil": "Mabuti"
+      },
+      {
+        "gloss": "HANDSOME",
+        "fil": "Guwapo"
+      },
+      {
+        "gloss": "HAPPY",
+        "fil": "Masaya"
+      },
+      {
+        "gloss": "HE",
+        "fil": "Siya (lalaki)"
+      },
+      {
+        "gloss": "HEADACHE",
+        "fil": "Sakit ng ulo"
+      },
+      {
+        "gloss": "HEARING",
+        "fil": "Nakaririnig"
+      },
+      {
+        "gloss": "HELLO",
+        "fil": "Kumusta"
+      },
+      {
+        "gloss": "HIS",
+        "fil": "Kanya (lalaki)"
+      },
+      {
+        "gloss": "HOME",
+        "fil": "Bahay / tahanan"
+      },
+      {
+        "gloss": "HOSPITAL",
+        "fil": "Ospital"
+      },
+      {
+        "gloss": "HOTEL",
+        "fil": "Hotel"
+      },
+      {
+        "gloss": "HOW",
+        "fil": "Paano"
+      },
+      {
+        "gloss": "HUG",
+        "fil": "Yakap"
+      },
+      {
+        "gloss": "HUNGRY",
+        "fil": "Gutom"
+      },
+      {
+        "gloss": "HUSBAND",
+        "fil": "Asawang lalaki"
+      },
+      {
+        "gloss": "IF",
+        "fil": "Kung"
+      },
+      {
+        "gloss": "KID",
+        "fil": "Bata"
+      },
+      {
+        "gloss": "KISS",
+        "fil": "Halik"
+      },
+      {
+        "gloss": "KNOW",
+        "fil": "Alam"
+      },
+      {
+        "gloss": "LAUGH",
+        "fil": "Tawa"
+      },
+      {
+        "gloss": "LIKE",
+        "fil": "Gusto"
+      },
+      {
+        "gloss": "LISTEN",
+        "fil": "Makinig"
+      },
+      {
+        "gloss": "LOVE",
+        "fil": "Mahal"
+      },
+      {
+        "gloss": "MAN",
+        "fil": "Lalaki"
+      },
+      {
+        "gloss": "MANY",
+        "fil": "Marami"
+      },
+      {
+        "gloss": "MAYBE",
+        "fil": "Siguro"
+      },
+      {
+        "gloss": "ME",
+        "fil": "Ako"
+      },
+      {
+        "gloss": "MINE",
+        "fil": "Akin"
+      },
+      {
+        "gloss": "MONEY",
+        "fil": "Pera"
+      },
+      {
+        "gloss": "MORE",
+        "fil": "Higit pa / dagdag"
+      },
+      {
+        "gloss": "MORNING",
+        "fil": "Umaga"
+      },
+      {
+        "gloss": "MOTHER",
+        "fil": "Nanay"
+      },
+      {
+        "gloss": "MUST",
+        "fil": "Dapat"
+      },
+      {
+        "gloss": "MY",
+        "fil": "Aking"
+      },
+      {
+        "gloss": "MYSELF",
+        "fil": "Ako mismo"
+      },
+      {
+        "gloss": "NAME",
+        "fil": "Pangalan"
+      },
+      {
+        "gloss": "NEED",
+        "fil": "Kailangan"
+      },
+      {
+        "gloss": "NO",
+        "fil": "Hindi"
+      },
+      {
+        "gloss": "NOON",
+        "fil": "Tanghali"
+      },
+      {
+        "gloss": "NOT",
+        "fil": "Hindi"
+      },
+      {
+        "gloss": "NOW",
+        "fil": "Ngayon"
+      },
+      {
+        "gloss": "OTHER",
+        "fil": "Iba"
+      },
+      {
+        "gloss": "PARENTS",
+        "fil": "Mga magulang"
+      },
+      {
+        "gloss": "PHONE",
+        "fil": "Telepono"
+      },
+      {
+        "gloss": "PIZZA",
+        "fil": "Pizza"
+      },
+      {
+        "gloss": "PLEASE",
+        "fil": "Pakiusap"
+      },
+      {
+        "gloss": "READ",
+        "fil": "Magbasa"
+      },
+      {
+        "gloss": "REALLY",
+        "fil": "Talaga"
+      },
+      {
+        "gloss": "RESTAURANT",
+        "fil": "Restawran"
+      },
+      {
+        "gloss": "SAD",
+        "fil": "Malungkot"
+      },
+      {
+        "gloss": "SELF",
+        "fil": "Sarili"
+      },
+      {
+        "gloss": "SHOULD",
+        "fil": "Dapat"
+      },
+      {
+        "gloss": "SICK",
+        "fil": "May sakit"
+      },
+      {
+        "gloss": "SIGN",
+        "fil": "Senyas / sign"
+      },
+      {
+        "gloss": "SOMETIMES",
+        "fil": "Minsan"
+      },
+      {
+        "gloss": "SOON",
+        "fil": "Malapit na"
+      },
+      {
+        "gloss": "SORRY",
+        "fil": "Paumanhin"
+      },
+      {
+        "gloss": "TEACH",
+        "fil": "Magturo"
+      },
+      {
+        "gloss": "THANK YOU",
+        "fil": "Salamat"
+      },
+      {
+        "gloss": "TIME",
+        "fil": "Oras"
+      },
+      {
+        "gloss": "TO",
+        "fil": "Sa / papunta"
+      },
+      {
+        "gloss": "TODAY",
+        "fil": "Ngayong araw"
+      },
+      {
+        "gloss": "TOMORROW",
+        "fil": "Bukas"
+      },
+      {
+        "gloss": "UNDERSTAND",
+        "fil": "Naiintindihan"
+      },
+      {
+        "gloss": "WANT",
+        "fil": "Gusto / nais"
+      },
+      {
+        "gloss": "WATER",
+        "fil": "Tubig"
+      },
+      {
+        "gloss": "WELCOME",
+        "fil": "Maligayang pagdating"
+      },
+      {
+        "gloss": "WHAT",
+        "fil": "Ano"
+      },
+      {
+        "gloss": "WHERE",
+        "fil": "Saan"
+      },
+      {
+        "gloss": "WHO",
+        "fil": "Sino"
+      },
+      {
+        "gloss": "WHY",
+        "fil": "Bakit"
+      },
+      {
+        "gloss": "WIFE",
+        "fil": "Asawang babae"
+      },
+      {
+        "gloss": "WILL",
+        "fil": "(pang-hinaharap: gagawin pa)"
+      },
+      {
+        "gloss": "WITH",
+        "fil": "Kasama"
+      },
+      {
+        "gloss": "WOMAN",
+        "fil": "Babae"
+      },
+      {
+        "gloss": "WORLD",
+        "fil": "Mundo"
+      },
+      {
+        "gloss": "WRITE",
+        "fil": "Sumulat"
+      },
+      {
+        "gloss": "YES",
+        "fil": "Oo"
+      },
+      {
+        "gloss": "YESTERDAY",
+        "fil": "Kahapon"
+      },
+      {
+        "gloss": "YOU",
+        "fil": "Ikaw"
+      },
+      {
+        "gloss": "YOUR",
+        "fil": "Iyo"
+      }
+    ]
+  }
+}
