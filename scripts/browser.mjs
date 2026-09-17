@@ -30,7 +30,8 @@ const scheme = opt('scheme', 'light');
 const lang = opt('lang', null);
 const scale = Number(opt('scale', mobile ? 2 : 1));
 const atY = opt('y', null);
-const evalExpr = opt('eval', null);   // css px, or a CSS selector to scroll to
+const evalExpr = opt('eval', null);
+const preExpr = opt('pre', null);    // JS to run before capture/print   // css px, or a CSS selector to scroll to
 
 if (!cmd || !url || !out) {
   console.error('usage: browser.mjs shot|pdf --url <url> --out <file> [--width --height --full --mobile --scheme --lang]');
@@ -84,7 +85,7 @@ function waitFor(method, sessionId) {
   return new Promise((resolve) => listeners.push({ method, sessionId, resolve }));
 }
 
-const killer = setTimeout(() => { console.error('timed out'); browser.kill(); process.exit(1); }, 60000);
+const killer = setTimeout(() => { console.error('timed out'); browser.kill(); process.exit(1); }, 180000);
 try {
   const v = await version();
   ws = new WebSocket(v.webSocketDebuggerUrl);
@@ -123,6 +124,7 @@ try {
   await send('Runtime.evaluate', { expression: 'document.fonts.ready', awaitPromise: true }, s);
   await sleep(400);
 
+  if (preExpr) { await send('Runtime.evaluate', { expression: preExpr, awaitPromise: true }, s); await sleep(300); }
   if (evalExpr) {
     const r = await send('Runtime.evaluate', { expression: evalExpr, returnByValue: true }, s);
     console.log(JSON.stringify(r.result.value));
@@ -161,10 +163,19 @@ try {
     }
   } else if (cmd === 'pdf') {
     await send('Runtime.evaluate', { expression: "document.querySelectorAll('details').forEach(d => d.open = true)" }, s);
+    // Screenshots print from their JPEG twins (assets/screens/jpg): Chromium's PDF
+    // printer hangs once a document carries ~16 WebP or PNG rasters.
+    await send('Runtime.evaluate', { expression: "document.querySelectorAll('.phone img[src$=\".webp\"]').forEach(i => { i.src = i.src.replace('/screens/', '/screens/jpg/').replace(/\.webp$/, '.jpg'); })" }, s);
+    // Lazy images never load for a print that starts off-screen: force them and wait.
+    await send('Runtime.evaluate', { expression: `(async () => {
+      const imgs = [...document.querySelectorAll('img')];
+      imgs.forEach((i) => { i.loading = 'eager'; });
+      await Promise.all(imgs.map((i) => i.complete ? null : new Promise((r) => { i.onload = i.onerror = r; })));
+      return imgs.length;
+    })()`, awaitPromise: true }, s);
     // Let @page in the stylesheet decide size and margins.
     const pdf = await send('Page.printToPDF', {
       printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false,
-      generateDocumentOutline: true,
     }, s);
     mkdirSync(dirname(out), { recursive: true });
     writeFileSync(out, Buffer.from(pdf.data, 'base64'));

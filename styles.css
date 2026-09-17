@@ -375,11 +375,11 @@ html[data-lang="fil"] .phone[data-placeholder]::after { content: "Paparating ang
   .part { break-inside: auto; }
 
   /* a step is text on the left and its screen on the right, so two fit a page */
-  .step { display: grid; grid-template-columns: minmax(0, 1fr) 38mm; column-gap: 7mm; align-items: start; break-inside: avoid; padding: 0 0 6mm; }
+  .step { display: grid; grid-template-columns: minmax(0, 1fr) 44mm; column-gap: 7mm; align-items: start; break-inside: avoid; padding: 0 0 6mm; }
   .step > * { grid-column: 1; }
   .step > .phone { grid-column: 2; grid-row: 1 / span 6; }
   .download > .phone { display: none; }
-  .phone { width: 38mm; margin: 1mm 0 0; padding: 1.4mm; border-radius: 6mm; box-shadow: none; background: #222; }
+  .phone { width: 44mm; margin: 1mm 0 0; padding: 1.6mm; border-radius: 7mm; box-shadow: none; background: #222; }
   .phone img { border-radius: 4.8mm; }
   .phone figcaption { font-size: 6.5pt; padding: 4mm 2.5mm 2.5mm; }
   .phone[data-placeholder]::after { font-size: 6pt; padding: 1mm 2mm; }

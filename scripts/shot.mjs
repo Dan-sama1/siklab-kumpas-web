@@ -57,6 +57,9 @@ const png = execFileSync(adb, ['exec-out', 'screencap', '-p'], { maxBuffer: 64 *
 writeFileSync(raw, png);
 // 540 px wide is 2× the frame's largest rendered size; webp keeps it ~40 KB.
 execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', raw, '-vf', 'scale=540:-2', '-quality', '85', out]);
+// JPEG twin for the PDF: Chromium's PDF printer hangs once a page has ~16 WebP/PNG rasters.
+mkdirSync(join(dir, 'jpg'), { recursive: true });
+execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-q:v', '3', join(dir, 'jpg', arg + '.jpg')]);
 unlinkSync(raw);
 
 // Every frame for this screen: point at the file and drop the placeholder flag.
